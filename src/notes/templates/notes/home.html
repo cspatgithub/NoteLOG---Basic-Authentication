@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="my-3 p-4 bg-white rounded note-list-box">
+    <div class="d-flex mb-3">
+        <p class="lead pt-2 mb-0 text-primary">Your Notes</p>
+        <a href="{% url 'note-create' %}" class="btn btn-success ml-auto">+ New</a>
+    </div>
+
+   {% if notes %}
+        {% for note in notes %}
+            <a href="{{note.get_absolute_url}}" class="d-block text-dark note-box border-bottom p-2 m-0">
+                <p class="m-0"><span class="note-title">{{note.title}}</span> - {{note.text}}</p>
+            </a>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-warning">
+            You have no notes created.
+        </div>
+    {% endif %}
+</div>
+{% endblock content %}

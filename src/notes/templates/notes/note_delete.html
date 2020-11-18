@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="my-3 p-4 bg-white rounded note-list-box">
+    <h5 class="mb-4">{{note.title}}</h5>
+
+    <p>Are you sure you want to delete this note?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, delete</button>
+        <a href="{% url 'home' %}" class="ml-3 btn btn-success ">Cancel</a>
+    </form>
+
+
+</div>
+{% endblock content %}

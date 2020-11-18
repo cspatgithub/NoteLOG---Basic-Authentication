@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="my-3 p-4 bg-white rounded note-list-box">
+    <h5 class="mb-4">{{note.title}}</h5>
+
+    <div class="p-3 bg-light rounded">
+        <p>{{note.text}}</p>
+    </div>
+
+    <div class="mt-3">
+        <a  href="{% url 'note-update' note.pk %}" class="btn btn-outline-primary py-1 mr-3">Edit</a>
+        <a  href="{% url 'note-delete' note.pk %}" class="btn btn-outline-danger py-1">Delete</a>
+    </div>
+</div>
+
+{% endblock content %}

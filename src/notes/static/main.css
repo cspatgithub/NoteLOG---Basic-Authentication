@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+a {
+  text-decoration: none !important;
+}
+.asteriskField {
+  display: none;
+}
+.project-title {
+  font-family: "Papyrus";
+  font-weight: 700;
+  color: purple;
+}
+
+/* NOTE */
+.note-list-box {
+  min-height: 40vh;
+}
+.note-box p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+.note-box:hover {
+  background-color: #f8f9fa;
+}
+.note-title {
+  font-weight: 500;
+}

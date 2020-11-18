@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="my-3 p-4 bg-white rounded note-list-box">
+    <h5 class="mb-3">You signed out.</h5>
+    <p class="lead">
+        NoteLOG is a simple note-taking application ipsum dolor sit amet, consectetur adipisicing.
+    </p>
+
+    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+    <a href="{% url 'register' %}" class="btn btn-success ml-3">Register</a>
+
+</div>
+{% endblock content %}
